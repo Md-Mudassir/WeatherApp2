@@ -31,14 +31,5 @@ function weatherApp() {
   document.getElementById("date").innerHTML = weekdays[weekday_value];
 }
 
-// function convert(degree) {
-//   let x;
-//   if (degree == "C") {
-//     x = (document.getElementById("temp").value * 9) / 5 + 32;
-//     document.getElementById("temp").value = Math.round(x);
-//   } else {
-//     x = ((document.getElementById("temp").value - 32) * 5) / 9;
-//     document.getElementById("temp").value = Math.round(x);
-//   }
-// }
+
 
