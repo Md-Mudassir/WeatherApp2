@@ -1,3 +1,4 @@
+//function to retrieve the elements
 function weatherApp() {
   let cities = [
     { city: "Bangalore", Celcius: 25, Data: "Sunny" },
@@ -13,6 +14,7 @@ function weatherApp() {
   document.getElementById("data").innerHTML = data;
   document.getElementById("temp").innerHTML = temp + " &degC | &degF";
 
+  //to show the date
   var weekdays = new Array(7);
   weekdays[0] = "Sunday";
   weekdays[1] = "Monday";
@@ -39,20 +41,4 @@ function convert(degree) {
     document.getElementById("temp").value = Math.round(x);
   }
 }
-//to show date
-// n = new Date();
-// y = document.getElementById("date").innerHTML = n;
 
-// store the value in temp
-// let city = document.getElementById("choose").value;
-// // display the city name from the given input
-// // document.getElementById("city").innerHTML = temp;
-// // fetch the value from objects based on the given key
-// document.getElementById("temprature").innerHTML =
-//   temp + " : " + cities[temp] + " &deg C";
-
-// if ((document.getElementById("temprature").innerHTML = "undefined")) {
-//   document.getElementById("temprature").innerHTML = " City Name?";
-// }
-//
-// }
