@@ -21,3 +21,8 @@ h3 {
 .deg {
   font-size: 1em;
 }
+
+#pick {
+  /* height: 10%; */
+  width: 35%;
+}
