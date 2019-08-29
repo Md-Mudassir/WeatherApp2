@@ -2,7 +2,7 @@ function weatherApp() {
   let cities = [
     { city: "Bangalore", Celcius: 25, Data: "Sunny" },
     { city: "Chennai", Celcius: 15, Data: "Rainy" },
-    { city: "Adoni", Celcius: 30, Data: "Cloudy ☁️" },
+    { city: "Adoni", Celcius: 30, Data: "Cloudy ,img:☁️" },
     { city: "Bellary", Celcius: 40, Data: "Hot" }
   ];
   let input = document.getElementById("pick").value;
