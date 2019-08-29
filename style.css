@@ -1,0 +1,23 @@
+select {
+  height: 26px;
+  width: 40%;
+  font-size: 17px;
+}
+body {
+  background-color: rgb(236, 236, 236);
+}
+.container {
+  margin-left: 38%;
+}
+
+.Weather {
+  margin-top: 16%;
+}
+
+h3 {
+  font-size: 1.8em;
+}
+
+.deg {
+  font-size: 1em;
+}

@@ -1,0 +1,40 @@
+<!-- Author:Mohammed Mudassir
+Abstract: this app generates the temprature for the specified city -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather Forecast App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+</head>
+<div class="container">
+    <!-- displaying the results  -->
+    <header>
+        <h1 id="city">Bangalore, Karnataka</h1>
+        <p id="date">Wednesday,1:00</p>
+        <p id="data">Partly Cloudy</p>
+        <h3 id="temp"> 26 <span id="f" onclick="convert('f')">&degC | &degF</span> </h3>
+    </header>
+
+    <!-- Weather app inputs -->
+    <div class="Weather">
+        <p>Enter City Name</p>
+        <select id="pick" onchange="weatherApp()" onchange="myDate()">
+            <option value="Bangalore">Bangalore</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Adoni">Adoni</option>
+            <option value="Bellary">Bellary</option>
+        </select>
+        <!-- <input type="text" id="cityName" placeholder="type city name"> -->
+        <!-- <input type="button" id="btn" value="Search" onclick="weatherApp()"> -->
+    </div>
+</div>
+
+<body>
+
+</body>
+<script src="./js/function.js"></script>
+
+</html>
