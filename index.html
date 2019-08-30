@@ -13,28 +13,25 @@ Abstract: this app generates the temprature for the specified city -->
     <!-- displaying the results  -->
     <header>
         <h1 id="city">Bangalore, Karnataka</h1>
-        <p id="date">Wednesday,1:00</p>
-        <p id="data">Partly Cloudy</p>
-        <h3 id="temp"> 26 <span id="f" onclick="convert('f')">&degC | &degF</span> </h3>
+        <p id="date">Wednesday, 1:00</p>
+        <p id="data">Partly Cloudy ☁️</p>
+
+        <h1 id="temp"> 26 <sup id="C" onclick="convertTemp()">&degC |</sup><sup id="F"
+                onclick="convertTemp()">&degF</sup>
+        </h1>
     </header>
 
     <!-- Weather app inputs -->
     <div class="Weather">
-        <p>Enter City Name</p>
-        <!-- <select id="pick" onchange="weatherApp()" onchange="myDate()">
-            <option value="Bangalore">Bangalore</option>
-            <option value="Chennai">Chennai</option>
-            <option value="Adoni">Adoni</option>
-            <option value="Bellary">Bellary</option>
-        </select> -->
-        <input type="text" onchange="weatherApp()" id="pick" list="cities" placeholder="Type City Name">
+        <h5>Enter City Name</h5>
+        <input type="text" onchange="Time(),weatherApp()" id="pick" list="cities" placeholder="City, State">
         <datalist id="cities">
             <option value="Bangalore">
             <option value="Chennai">
             <option value="Adoni">
             <option value="Bellary">
         </datalist>
-        <!-- <input type="button" id="btn" value="Search" onclick="weatherApp()"> -->
+
     </div>
 </div>
 

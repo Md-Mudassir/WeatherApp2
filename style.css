@@ -4,7 +4,8 @@ select {
   font-size: 17px;
 }
 body {
-  background-color: rgb(236, 236, 236);
+  background-color: rgb(245, 243, 243);
+  font-family: sans-serif;
 }
 .container {
   margin-left: 38%;
@@ -24,5 +25,26 @@ h3 {
 
 #pick {
   /* height: 10%; */
-  width: 35%;
+  width: 40%;
+}
+
+sup {
+  font-size: 0.4em;
+}
+
+#C:hover {
+  color: rgb(0, 204, 255);
+  cursor: pointer;
+}
+
+#F:hover {
+  color: rgb(0, 204, 255);
+  cursor: pointer;
+}
+
+#temp {
+  font-size: 3em;
+}
+h5 {
+  margin-bottom: 1%;
 }
