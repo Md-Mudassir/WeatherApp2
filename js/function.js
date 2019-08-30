@@ -16,18 +16,6 @@ function weatherApp() {
   document.getElementById("temp").innerHTML = temp + CF;
 }
 
-// function Celcius() {
-//   document.getElementById("temp").innerHTML =
-//     "4" +
-//     `<sup id="C" onclick="convertTemp()"> &degC |</sup><sup id="F" onclick="convertTemp()">&degF</sup>`;
-//   // temp1 = (document.getElementById("temp").value * 9) / 5 + 32;
-//   // document.getElementById("temp").innerHTML = Math.round(temp1);
-// }
-
-// function Farhenite() {
-//   document.getElementById("F");
-// }
-
 // day and time functions
 function addZero(i) {
   if (i < 10) {
@@ -55,6 +43,7 @@ function Time() {
   x.innerHTML = weekdays[weekday_value] + ", " + h + ":" + m;
 }
 
+//to convert C to F and viceversa
 function convertTemp() {
   var C = document.getElementById("temp"),
     F = document.getElementById("temp");
