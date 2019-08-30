@@ -7,7 +7,7 @@ function weatherApp() {
     { city: "Bellary, Karnataka", Celcius: 10, Data: "Fog 🌫️" }
   ];
   let input = document.getElementById("pick").value;
-  let CF = `<sup id="C" onclick="convertTemp()"> &degC |</sup><sup id="F" onclick="convertTemp()">&degF</sup>`;
+  let CF = `<sup id="C" onclick="convertTempC()"> &degC |</sup><sup id="F" onclick="convertTempF()">&degF</sup>`;
   let filtred = cities
     .filter(n => n.city.includes(input))
     .map(x => ((city = x.city), (temp = x.Celcius), (data = x.Data)));
@@ -19,7 +19,7 @@ function weatherApp() {
 // day and time functions
 function addZero(i) {
   if (i < 10) {
-    i = "0" + i;
+    i = 0 + i;
   }
   return i;
 }
@@ -39,20 +39,19 @@ function Time() {
   var x = document.getElementById("date");
   var h = addZero(d.getHours());
   var m = addZero(d.getMinutes());
-  var s = addZero(d.getSeconds());
   x.innerHTML = weekdays[weekday_value] + ", " + h + ":" + m;
 }
 
 //to convert C to F and viceversa
-function convertTemp() {
-  var C = document.getElementById("temp"),
-    F = document.getElementById("temp");
+function convertTempF() {
+  let CF = `<sup id="C" onclick="convertTempC()"> &degC |</sup><sup id="F" onclick="convertTempF()">&degF</sup>`;
+  let C = temp;
+  let Fer = Math.round((C * 9) / 5 + 32);
+  document.getElementById("temp").innerHTML = Fer + CF;
+}
 
-  if (C.value != "") {
-    F.value = Math.round((C.value * 9) / 5 + 32);
-    C.value = "";
-  } else {
-    C.value = Math.round(((F.value - 32) * 5) / 9);
-    F.value = "";
-  }
+function convertTempC() {
+  let CF = `<sup id="C" onclick="convertTempC()"> &degC |</sup><sup id="F" onclick="convertTempF()">&degF</sup>`;
+  let C = temp;
+  document.getElementById("temp").innerHTML = C + CF;
 }
