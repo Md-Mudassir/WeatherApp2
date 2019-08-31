@@ -1,3 +1,6 @@
+// to retrieve the Celcius & Farhenite elements
+let CF = `<sup id="C" onclick="convertTempC()"> &degC |</sup><sup id="F" onclick="convertTempF()">&degF</sup>`;
+
 //function to retrieve the elements
 function weatherApp() {
   let cities = [
@@ -7,7 +10,6 @@ function weatherApp() {
     { city: "Bellary, Karnataka", Celcius: 10, Data: "Fog 🌫️" }
   ];
   let input = document.getElementById("pick").value;
-  let CF = `<sup id="C" onclick="convertTempC()"> &degC |</sup><sup id="F" onclick="convertTempF()">&degF</sup>`;
   let filtred = cities
     .filter(n => n.city.includes(input))
     .map(x => ((city = x.city), (temp = x.Celcius), (data = x.Data)));
@@ -44,14 +46,12 @@ function Time() {
 
 //to convert C to F and viceversa
 function convertTempF() {
-  let CF = `<sup id="C" onclick="convertTempC()"> &degC |</sup><sup id="F" onclick="convertTempF()">&degF</sup>`;
   let C = temp;
   let Fer = Math.round((C * 9) / 5 + 32);
   document.getElementById("temp").innerHTML = Fer + CF;
 }
 
 function convertTempC() {
-  let CF = `<sup id="C" onclick="convertTempC()"> &degC |</sup><sup id="F" onclick="convertTempF()">&degF</sup>`;
   let C = temp;
   document.getElementById("temp").innerHTML = C + CF;
 }
