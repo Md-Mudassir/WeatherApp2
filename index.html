@@ -10,27 +10,32 @@ Abstract: this app generates the temprature for the specified city -->
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 </head>
 <div class="container">
-    <!-- displaying the results  -->
-    <header>
-        <h1 id="city">Bangalore, Karnataka</h1>
-        <p id="date">Wednesday, 1:00</p>
-        <p id="data">Partly Cloudy ☁️</p>
-        <h1 id="temp"> 26 <sup id="C" onclick="convertTempC()">&degC |</sup><sup id="F"
-                onclick="convertTempF()">&degF</sup>
-        </h1>
-    </header>
+    <div class="box1">
+        <h1 id="cen">WeatherApp</h1>
+    </div>
+    <div class="box2">
+        <!-- displaying the results  -->
+        <header>
+            <h1 id="city">Bangalore, Karnataka</h1>
+            <p id="date">Wednesday, 1:00</p>
+            <p id="data">Partly Cloudy ☁️</p>
+            <h1 id="temp"> 26 <sup id="C" onclick="convertTempC()">&degC |</sup><sup id="F"
+                    onclick="convertTempF()">&degF</sup>
+            </h1>
+        </header>
 
-    <!-- Weather app inputs -->
-    <div class="Weather">
-        <h5>Enter City Name</h5>
-        <input type="text" onchange="Time(),weatherApp()" id="pick" list="cities" placeholder="City, State">
-        <datalist id="cities">
-            <option value="Bangalore">
-            <option value="Chennai">
-            <option value="Adoni">
-            <option value="Bellary">
-        </datalist>
+        <!-- Weather app inputs -->
+        <div class="Weather">
+            <h5>Enter City Name</h5>
+            <input type="text" onchange="Time(),weatherApp()" id="pick" list="cities" placeholder="City, State">
+            <datalist id="cities">
+                <option value="Bangalore">
+                <option value="Chennai">
+                <option value="Adoni">
+                <option value="Bellary">
+            </datalist>
 
+        </div>
     </div>
 </div>
 

@@ -1,16 +1,26 @@
-select {
-  height: 26px;
-  width: 40%;
-  font-size: 17px;
-}
 body {
+  margin: 0%;
   background-color: rgb(245, 243, 243);
-  font-family: sans-serif;
+  font-family: "Lato", sans-serif;
 }
 .container {
-  margin-left: 38%;
-}
+  /* margin-left: 38%; */
 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+#cen {
+  text-align: center;
+  margin-top: 50%;
+}
+.box1 {
+  background: rgb(0, 152, 223);
+}
+.box2 {
+  padding: 2px;
+  margin-left: 5%;
+}
 .Weather {
   margin-top: 16%;
 }
@@ -24,8 +34,8 @@ h3 {
 }
 
 #pick {
-  /* height: 10%; */
-  width: 40%;
+  height: 10%;
+  width: 60%;
 }
 
 sup {
