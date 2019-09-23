@@ -24,7 +24,7 @@ body {
   padding-top: 15%;
 }
 .Weather {
-  margin-top: 16%;
+  margin-top: 10%;
 }
 
 h3 {
@@ -36,8 +36,8 @@ h3 {
 }
 
 #pick {
-  height: 10%;
-  width: 50%;
+  height: 20%;
+  width: 60%;
 }
 
 sup {
@@ -67,17 +67,10 @@ p {
   color: #646262;
 }
 
-/* #pick {
-  border-radius: 0.4rem;
-  box-shadow: #646262;
-  font-size: 1.2em;
-} */
-
 input[type="text"],
 option {
   width: 120%;
   padding: 12px 20px;
-  /* margin: 8px 0; */
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 26px;
