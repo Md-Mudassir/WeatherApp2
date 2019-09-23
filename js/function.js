@@ -1,22 +1,30 @@
 // to retrieve the Celcius & Farhenite elements
 let CF = `<sup id="C" onclick="convertTempC()"> &degC |</sup><sup id="F" onclick="convertTempF()">&degF</sup>`;
-
+let colors = document.getElementsByClassName("box2");
 //function to retrieve the elements
-function weatherApp() {
+weatherApp = () => {
   let cities = [
-    { city: "Bangalore, Karnataka", Celcius: 25, Data: "Sunny ☀️" },
-    { city: "Chennai, Tamil Nadu", Celcius: 15, Data: "Rainy 🌧️" },
-    { city: "Adoni, Andhra Pradesh", Celcius: 30, Data: "Cloudy ☁️" },
-    { city: "Bellary, Karnataka", Celcius: 10, Data: "Fog 🌫️" }
+    { city: "Bangalore, Karnataka", Celcius: 25, emoji: "☀️", Data: "Sunny" },
+    { city: "Chennai, Tamil Nadu", Celcius: 15, emoji: "🌧️", Data: "Rainy" },
+    { city: "Adoni, Andhra Pradesh", Celcius: 30, emoji: "☁️", Data: "Cloudy" },
+    { city: "Bellary, Karnataka", Celcius: 10, emoji: " 🌫️", Data: "Fog" }
   ];
   let input = document.getElementById("pick").value;
   let filtred = cities
     .filter(n => n.city.includes(input))
-    .map(x => ((city = x.city), (temp = x.Celcius), (data = x.Data)));
+    .map(
+      x => (
+        (city = x.city), (temp = x.Celcius), (data = x.Data), (Emoji = x.emoji)
+      )
+    );
   document.getElementById("city").innerHTML = city;
   document.getElementById("data").innerHTML = data;
-  document.getElementById("temp").innerHTML = temp + CF;
-}
+  document.getElementById("temp").innerHTML = Emoji + temp + CF;
+
+  // if (temp > 20) {
+  //   colors.style.background = "red";
+  // }
+};
 
 // day and time functions
 function addZero(i) {
@@ -48,10 +56,10 @@ function Time() {
 function convertTempF() {
   let C = temp;
   let Fer = Math.round((C * 9) / 5 + 32);
-  document.getElementById("temp").innerHTML = Fer + CF;
+  document.getElementById("temp").innerHTML = Emoji + Fer + CF;
 }
 
 function convertTempC() {
   let C = temp;
-  document.getElementById("temp").innerHTML = C + CF;
+  document.getElementById("temp").innerHTML = Emoji + C + CF;
 }

@@ -15,11 +15,11 @@ body {
   margin-top: 40%;
 }
 .box1 {
-  background: rgb(0, 152, 223);
+  background-image: url()
 }
 .box2 {
-  padding: 2px;
-  margin-left: 5%;
+  padding-left: 10%;
+  padding-top: 15%;
 }
 .Weather {
   margin-top: 16%;
@@ -54,7 +54,31 @@ sup {
 
 #temp {
   font-size: 3em;
+  color: black;
 }
 h5 {
   margin-bottom: 1%;
+}
+
+header h1,
+p {
+  color: #646262;
+}
+
+/* #pick {
+  border-radius: 0.4rem;
+  box-shadow: #646262;
+  font-size: 1.2em;
+} */
+
+input[type="text"],
+option {
+  width: 120%;
+  padding: 12px 20px;
+  /* margin: 8px 0; */
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 26px;
+  box-shadow: 2px 2px 2px #aaaaaa;
+  box-sizing: border-box;
 }
