@@ -20,10 +20,6 @@ weatherApp = () => {
   document.getElementById("city").innerHTML = city;
   document.getElementById("data").innerHTML = data;
   document.getElementById("temp").innerHTML = Emoji + temp + CF;
-
-  // if (temp > 20) {
-  //   colors.style.background = "red";
-  // }
 };
 
 // day and time functions
@@ -44,11 +40,11 @@ function Time() {
   weekdays[5] = "Friday";
   weekdays[6] = "Saturday";
 
-  var d = new Date();
+  let d = new Date();
   weekday_value = d.getDay();
-  var x = document.getElementById("date");
-  var h = addZero(d.getHours());
-  var m = addZero(d.getMinutes());
+  let x = document.getElementById("date");
+  let h = addZero(d.getHours());
+  let m = addZero(d.getMinutes());
   x.innerHTML = weekdays[weekday_value] + ", " + h + ":" + m;
 }
 
