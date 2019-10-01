@@ -76,3 +76,11 @@ option {
   box-shadow: 2px 2px 2px #aaaaaa;
   box-sizing: border-box;
 }
+
+@media only screen and (max-width: 600px) {
+  body {
+    /* width: 100vw;
+    height: 100vh; */
+    /* background-color: lightblue; */
+  }
+}
