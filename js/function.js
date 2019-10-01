@@ -22,6 +22,18 @@ weatherApp = () => {
   document.getElementById("temp").innerHTML = `${Emoji}  ${temp} ${CF}`;
 };
 
+//to convert C to F and viceversa
+function convertTempF() {
+  let C = temp;
+  let Fer = Math.round((C * 9) / 5 + 32);
+  document.getElementById("temp").innerHTML = `${Emoji}  ${Fer}  ${CF}`;
+}
+
+function convertTempC() {
+  let C = temp;
+  document.getElementById("temp").innerHTML = `${Emoji}  ${C}  ${CF}`;
+}
+
 // day and time functions
 function addZero(i) {
   if (i < 10) {
@@ -46,16 +58,4 @@ function Time() {
   let h = addZero(d.getHours());
   let m = addZero(d.getMinutes());
   x.innerHTML = weekdays[weekday_value] + ", " + h + ":" + m;
-}
-
-//to convert C to F and viceversa
-function convertTempF() {
-  let C = temp;
-  let Fer = Math.round((C * 9) / 5 + 32);
-  document.getElementById("temp").innerHTML = `${Emoji}  ${Fer}  ${CF}`;
-}
-
-function convertTempC() {
-  let C = temp;
-  document.getElementById("temp").innerHTML = `${Emoji}  ${C}  ${CF}`;
 }
