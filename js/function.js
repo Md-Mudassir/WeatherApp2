@@ -31,7 +31,7 @@ function addZero(i) {
 }
 
 function Time() {
-  var weekdays = new Array(7);
+  let weekdays = new Array(7);
   weekdays[0] = "Sunday";
   weekdays[1] = "Monday";
   weekdays[2] = "Tuesday";
