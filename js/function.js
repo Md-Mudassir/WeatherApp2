@@ -19,7 +19,7 @@ weatherApp = () => {
     );
   document.getElementById("city").innerHTML = city;
   document.getElementById("data").innerHTML = data;
-  document.getElementById("temp").innerHTML = Emoji + temp + CF;
+  document.getElementById("temp").innerHTML = `${Emoji}  ${temp} ${CF}`;
 };
 
 // day and time functions
@@ -52,10 +52,10 @@ function Time() {
 function convertTempF() {
   let C = temp;
   let Fer = Math.round((C * 9) / 5 + 32);
-  document.getElementById("temp").innerHTML = Emoji + Fer + CF;
+  document.getElementById("temp").innerHTML = `${Emoji}  ${Fer}  ${CF}`;
 }
 
 function convertTempC() {
   let C = temp;
-  document.getElementById("temp").innerHTML = Emoji + C + CF;
+  document.getElementById("temp").innerHTML = `${Emoji}  ${C}  ${CF}`;
 }
