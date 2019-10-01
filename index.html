@@ -9,36 +9,38 @@ Abstract: this app generates the temprature for the specified city -->
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 </head>
-<div class="container">
-    <div class="box1">
-
-    </div>
-    <div class="box2">
-        <!-- displaying the results  -->
-        <header>
-            <h1 id="city">Bangalore, Karnataka</h1>
-            <p id="date">Wednesday, 1:00</p>
-            <p id="data">Partly Cloudy ☁️</p>
-            <h1 id="temp"> .. </h1>
-        </header>
-
-        <!-- Weather app inputs -->
-        <div class="Weather">
-
-            <input type="text" onchange="Time(),weatherApp()" id="pick" list="cities" placeholder="Location?">
-            <datalist id="cities">
-                <option value="Bangalore">
-                <option value="Chennai">
-                <option value="Adoni">
-                <option value="Bellary">
-            </datalist>
-
-        </div>
-    </div>
-</div>
 
 <body>
 
+    <iframe class="audio" loop autoplay="autoplay" controls style="display:none;">
+        <source src="https://s3.amazonaws.com/Syntaxxx/bigger-picture.mp3" type="audio/ogg" />
+    </iframe>
+    <div class="container">
+        <div class="box1">
+        </div>
+        <div class="box2">
+            <!-- displaying the results  -->    
+            <header>
+                <h1 id="city">Bangalore, Karnataka</h1>
+                <p id="date">Wednesday, 1:00</p>
+                <p id="data">Partly Cloudy ☁️</p>
+                <h1 id="temp"> .. </h1>
+            </header>
+
+            <!-- Weather app inputs -->
+            <div class="Weather">
+
+                <input type="text" onchange="Time(),weatherApp()" id="pick" list="cities" placeholder="Location?">
+                <datalist id="cities">
+                    <option value="Bangalore">
+                    <option value="Chennai">
+                    <option value="Adoni">
+                    <option value="Bellary">
+                </datalist>
+
+            </div>
+        </div>
+    </div>
 </body>
 <script src="./js/function.js"></script>
 

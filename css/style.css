@@ -2,6 +2,7 @@ body {
   margin: 0%;
   background-color: rgb(245, 243, 243);
   font-family: "Lato", sans-serif;
+  overflow: hidden;
 }
 .container {
   display: grid;

@@ -7,7 +7,7 @@ weatherApp = () => {
     { city: "Bangalore, Karnataka", Celcius: 25, emoji: "☀️", Data: "Sunny" },
     { city: "Chennai, Tamil Nadu", Celcius: 15, emoji: "🌧️", Data: "Rainy" },
     { city: "Adoni, Andhra Pradesh", Celcius: 30, emoji: "☁️", Data: "Cloudy" },
-    { city: "Bellary, Karnataka", Celcius: 10, emoji: " 🌫️", Data: "Fog" }
+    { city: "Bellary, Karnataka", Celcius: 40, emoji: " 🌫️", Data: "Fog" }
   ];
   let input = document.getElementById("pick").value;
   let filtred = cities
