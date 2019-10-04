@@ -23,26 +23,26 @@ weatherApp = () => {
 };
 
 //to convert C to F and viceversa
-function convertTempF() {
+convertTempF = () => {
   let C = temp;
   let Fer = Math.round((C * 9) / 5 + 32);
   document.getElementById("temp").innerHTML = `${Emoji}  ${Fer}  ${CF}`;
-}
+};
 
-function convertTempC() {
+convertTempC = () => {
   let C = temp;
   document.getElementById("temp").innerHTML = `${Emoji}  ${C}  ${CF}`;
-}
+};
 
 // day and time functions
-function addZero(i) {
+addZero = i => {
   if (i < 10) {
     i = 0 + i;
   }
   return i;
-}
+};
 
-function Time() {
+Time = () => {
   let weekdays = new Array(7);
   weekdays[0] = "Sunday";
   weekdays[1] = "Monday";
@@ -58,4 +58,4 @@ function Time() {
   let h = addZero(d.getHours());
   let m = addZero(d.getMinutes());
   x.innerHTML = weekdays[weekday_value] + ", " + h + ":" + m;
-}
+};

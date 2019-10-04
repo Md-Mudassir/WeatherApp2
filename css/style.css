@@ -1,5 +1,7 @@
 body {
   margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
   background-color: rgb(245, 243, 243);
   font-family: "Lato", sans-serif;
   overflow: hidden;
@@ -78,9 +80,15 @@ option {
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    /* width: 100vw;
-    height: 100vh; */
-    background-color: lightblue;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
   }
+  .Weather {
+    margin-top: 10%;
+  }
+}
+
+input[type="text"]:focus {
+  outline: none;
 }
