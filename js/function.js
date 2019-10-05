@@ -55,6 +55,7 @@ findWeatherDetails = () => {
       appKey;
     httpRequestAsync(searchLink, theResponse);
   }
+  Time();
 };
 
 // parsing and assigning the objects to elements

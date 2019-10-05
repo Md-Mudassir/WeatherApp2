@@ -64,16 +64,19 @@ h5 {
   margin-bottom: 1%;
 }
 
+h1 {
+  margin-left: 10%;
+}
+h2 {
+  font-size: 160%;
+}
 header {
   position: relative;
 }
-header h1,
-p {
-  color: #000000;
-}
+
 .onSearch {
   position: absolute;
-  top: 20%;
+  top: 10%;
   margin-left: 2%;
 }
 .onSearch:hover {
@@ -105,6 +108,6 @@ input[type="text"]:focus {
 
 img {
   position: absolute;
-  top: 110%;
+  top: 70%;
   color: rgb(255, 97, 97);
 }
