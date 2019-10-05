@@ -47,6 +47,7 @@ sup {
 
 #C:hover {
   color: rgb(0, 204, 255);
+  color: rgb(189, 183, 183);
   cursor: pointer;
 }
 
@@ -65,12 +66,14 @@ h5 {
 
 header h1,
 p {
-  color: #646262;
+  color: #000000;
 }
-
+.onSearch:hover {
+  cursor: pointer;
+}
 input[type="text"],
 option {
-  width: 120%;
+  width: 60%;
   padding: 12px 20px;
   display: inline-block;
   border: 1px solid #ccc;
