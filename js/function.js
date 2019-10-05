@@ -1,6 +1,6 @@
 // to retrieve the Celcius & Farhenite elements
 let CF = `<sup id="C" onclick="convertTempC()"> &degC |</sup><sup id="F" onclick="convertTempF()">&degF</sup>`;
-let colors = document.getElementsByClassName("box2");
+
 //function to retrieve the elements
 weatherApp = () => {
   let cities = [
