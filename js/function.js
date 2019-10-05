@@ -7,6 +7,9 @@ let searchInput = document.getElementById("search-txt");
 let cityName = document.getElementById("city");
 let icon = document.getElementById("data");
 let temperature = document.getElementById("temp");
+let weekdays = new Array(7);
+let searchLink;
+let jsonObject;
 
 addZero = i => {
   if (i < 10) {
@@ -17,7 +20,7 @@ addZero = i => {
 
 // to display date
 Time = () => {
-  let weekdays = new Array(7);
+  weekdays = new Array(7);
   weekdays[0] = "Sunday";
   weekdays[1] = "Monday";
   weekdays[2] = "Tuesday";
@@ -39,28 +42,30 @@ searchInput.addEventListener("keypress", enterPressed);
 
 function enterPressed(event) {
   if (event.key === "Enter") {
-    Time();
-    findWeatherDetails();
+    getWeatherDetails.findWeatherDetails();
   }
 }
+class getWeather {
+  // API function
+  findWeatherDetails = () => {
+    if (searchInput.value === "") {
+    } else {
+      searchLink =
+        "https://api.openweathermap.org/data/2.5/weather?q=" +
+        searchInput.value +
+        "&appid=" +
+        appKey;
+      httpRequestAsync(searchLink, theResponse);
+    }
+    Time();
+  };
+}
 
-// API function
-findWeatherDetails = () => {
-  if (searchInput.value === "") {
-  } else {
-    let searchLink =
-      "https://api.openweathermap.org/data/2.5/weather?q=" +
-      searchInput.value +
-      "&appid=" +
-      appKey;
-    httpRequestAsync(searchLink, theResponse);
-  }
-  Time();
-};
+let getWeatherDetails = new getWeather();
 
 // parsing and assigning the objects to elements
 theResponse = response => {
-  let jsonObject = JSON.parse(response);
+  jsonObject = JSON.parse(response);
   cityName.innerHTML = searchInput.value;
   tempr = parseInt(jsonObject.main.temp - 273);
   icon.src =
