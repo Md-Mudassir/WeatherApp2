@@ -8,27 +8,38 @@ let cityName = document.getElementById("city");
 let icon = document.getElementById("data");
 let temperature = document.getElementById("temp");
 
+addZero = i => {
+  if (i < 10) {
+    i = 0 + i;
+  }
+  return i;
+};
+
 // to display date
-let weekdays = new Array(7);
-weekdays[0] = "Sunday";
-weekdays[1] = "Monday";
-weekdays[2] = "Tuesday";
-weekdays[3] = "Wednesday";
-weekdays[4] = "Thursday";
-weekdays[5] = "Friday";
-weekdays[6] = "Saturday";
+Time = () => {
+  let weekdays = new Array(7);
+  weekdays[0] = "Sunday";
+  weekdays[1] = "Monday";
+  weekdays[2] = "Tuesday";
+  weekdays[3] = "Wednesday";
+  weekdays[4] = "Thursday";
+  weekdays[5] = "Friday";
+  weekdays[6] = "Saturday";
 
-let current_date = new Date();
-
-weekday_value = current_date.getDay();
-
-document.getElementById("date").innerHTML = weekdays[weekday_value];
+  let d = new Date();
+  weekday_value = d.getDay();
+  let x = document.getElementById("date");
+  let h = addZero(d.getHours());
+  let m = addZero(d.getMinutes());
+  x.innerHTML = weekdays[weekday_value] + ", " + h + ":" + m;
+};
 
 // getting an input from user
 searchInput.addEventListener("keypress", enterPressed);
 
 function enterPressed(event) {
   if (event.key === "Enter") {
+    Time();
     findWeatherDetails();
   }
 }
@@ -55,12 +66,12 @@ theResponse = response => {
     "http://openweathermap.org/img/w/" + jsonObject.weather[0].icon + ".png";
   temperature.innerHTML = `${tempr} ${CF}`;
 
-  if (temperature.innerHTML >= "20" && temperature.innerHTML < "30") {
+  if (temperature.innerHTML >= "20" && temperature.innerHTML <= "30") {
     document.getElementById("box2").style.background = "rgb(247, 226, 109)";
-  } else if (temperature.innerHTML >= "30" && temperature.innerHTML < "40") {
-    document.getElementById("box2").style.background = "rgb(255, 112, 112)";
+  } else if (temperature.innerHTML >= "30" && temperature.innerHTML <= "40") {
+    document.getElementById("box2").style.background = "rgb(255, 97, 97)";
   } else {
-    document.getElementById("box2").style.background = "rgb(189, 183, 183)";
+    document.getElementById("box2").style.background = "white";
   }
 };
 
