@@ -49,7 +49,7 @@ findWeatherDetails = () => {
 // parsing and assigning the objects to elements
 theResponse = response => {
   let jsonObject = JSON.parse(response);
-  cityName.innerHTML = jsonObject.name;
+  cityName.innerHTML = searchInput.value;
   tempr = parseInt(jsonObject.main.temp - 273);
   icon.src =
     "http://openweathermap.org/img/w/" + jsonObject.weather[0].icon + ".png";
