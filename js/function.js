@@ -11,32 +11,6 @@ let weekdays = new Array(7);
 let searchLink;
 let jsonObject;
 
-addZero = i => {
-  if (i < 10) {
-    i = 0 + i;
-  }
-  return i;
-};
-
-// to display date
-Time = () => {
-  weekdays = new Array(7);
-  weekdays[0] = "Sunday";
-  weekdays[1] = "Monday";
-  weekdays[2] = "Tuesday";
-  weekdays[3] = "Wednesday";
-  weekdays[4] = "Thursday";
-  weekdays[5] = "Friday";
-  weekdays[6] = "Saturday";
-
-  let d = new Date();
-  weekday_value = d.getDay();
-  let x = document.getElementById("date");
-  let h = addZero(d.getHours());
-  let m = addZero(d.getMinutes());
-  x.innerHTML = weekdays[weekday_value] + ", " + h + ":" + m;
-};
-
 // getting an input from user
 searchInput.addEventListener("keypress", enterPressed);
 
@@ -73,9 +47,9 @@ theResponse = response => {
   temperature.innerHTML = `${tempr} ${CF}`;
 
   if (temperature.innerHTML >= "20" && temperature.innerHTML <= "30") {
-    document.getElementById("box2").style.background = "rgb(247, 226, 109)";
+    document.getElementById("box2").style.background = "rgb(252, 255, 122)";
   } else if (temperature.innerHTML >= "30" && temperature.innerHTML <= "40") {
-    document.getElementById("box2").style.background = "rgb(255, 97, 97)";
+    document.getElementById("box2").style.background = "rgb(255, 153, 154)";
   } else {
     document.getElementById("box2").style.background = "white";
   }
@@ -105,4 +79,30 @@ convertTempF = () => {
 convertTempC = () => {
   let C = tempr;
   document.getElementById("temp").innerHTML = ` ${C}  ${CF}`;
+};
+
+addZero = i => {
+  if (i < 10) {
+    i = 0 + i;
+  }
+  return i;
+};
+
+// to display date
+Time = () => {
+  weekdays = new Array(7);
+  weekdays[0] = "Sunday";
+  weekdays[1] = "Monday";
+  weekdays[2] = "Tuesday";
+  weekdays[3] = "Wednesday";
+  weekdays[4] = "Thursday";
+  weekdays[5] = "Friday";
+  weekdays[6] = "Saturday";
+
+  let d = new Date();
+  weekday_value = d.getDay();
+  let x = document.getElementById("date");
+  let h = addZero(d.getHours());
+  let m = addZero(d.getMinutes());
+  x.innerHTML = weekdays[weekday_value] + ", " + h + ":" + m;
 };
