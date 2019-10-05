@@ -6,10 +6,9 @@ Abstract: this app generates the temprature for the specified city -->
 
 <head>
     <title>Weather Forecast App</title>
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -21,13 +20,11 @@ Abstract: this app generates the temprature for the specified city -->
             <header>
                 <h2 id="city">Input Any City Name In The World</h2>
                 <p id="date"></p>
-                <img src="" alt="" id="data">
+                <img src="" alt="" id="icon">
                 <h1 id="temp"></h1>
             </header>
-
             <!-- Weather app inputs -->
             <div class="Weather">
-
                 <input type="text" placeholder="Location?" id="search-txt">
                 <i class="fa fa-search fa-2x onSearch" onclick="getWeatherDetails.findWeatherDetails()"></i>
 
@@ -37,15 +34,6 @@ Abstract: this app generates the temprature for the specified city -->
 <script src="./js/function.js"></script>
 <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9L1nE6idZ2kaIZHRkJoyUV0gS4lyv-48&libraries=places"></script>
-<script>
-    initialize = () => {
-        let options = {
-            types: ['(cities)']
-        };
-        let input = document.getElementById('search-txt');
-        let autocomplete = new google.maps.places.Autocomplete(input, options);
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
-</script>
+<script src="./js/PlacesAPI.js"></script>
 
 </html>

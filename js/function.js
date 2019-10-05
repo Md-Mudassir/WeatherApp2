@@ -2,12 +2,11 @@
 const appKey = "82005d27a116c2880c8f0fcb866998a0";
 
 // declaring variables
-let tempr;
+let tempratureValue;
 let searchInput = document.getElementById("search-txt");
 let cityName = document.getElementById("city");
-let icon = document.getElementById("data");
+let icon = document.getElementById("icon");
 let temperature = document.getElementById("temp");
-let weekdays = new Array(7);
 let searchLink;
 let jsonObject;
 
@@ -41,10 +40,10 @@ let getWeatherDetails = new getWeather();
 theResponse = response => {
   jsonObject = JSON.parse(response);
   cityName.innerHTML = searchInput.value;
-  tempr = parseInt(jsonObject.main.temp - 273);
+  tempratureValue = parseInt(jsonObject.main.temp - 273);
   icon.src =
     "http://openweathermap.org/img/w/" + jsonObject.weather[0].icon + ".png";
-  temperature.innerHTML = `${tempr} ${CF}`;
+  temperature.innerHTML = `${tempratureValue} ${CF}`;
 
   if (temperature.innerHTML >= "20" && temperature.innerHTML <= "30") {
     document.getElementById("box2").style.background = "rgb(252, 255, 122)";
@@ -71,13 +70,13 @@ let CF = `<sup id="C" onclick="convertTempC()"> &degC |</sup><sup id="F" onclick
 
 //To convert C to F and viceversa
 convertTempF = () => {
-  let C = tempr;
+  let C = tempratureValue;
   let Fer = Math.round((C * 9) / 5 + 32);
   document.getElementById("temp").innerHTML = ` ${Fer}  ${CF}`;
 };
 
 convertTempC = () => {
-  let C = tempr;
+  let C = tempratureValue;
   document.getElementById("temp").innerHTML = ` ${C}  ${CF}`;
 };
 
@@ -90,7 +89,7 @@ addZero = i => {
 
 // to display date
 Time = () => {
-  weekdays = new Array(7);
+  let weekdays = new Array(7);
   weekdays[0] = "Sunday";
   weekdays[1] = "Monday";
   weekdays[2] = "Tuesday";
