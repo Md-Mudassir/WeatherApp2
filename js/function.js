@@ -1,5 +1,5 @@
 // API key from openweathermap.org
-const appKey = config.appKey;
+const appKey = config.apiKey;
 
 // declaring variables
 let tempratureValue;
