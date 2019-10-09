@@ -42,7 +42,7 @@ theResponse = response => {
   cityName.innerHTML = searchInput.value;
   tempratureValue = parseInt(jsonObject.main.temp - 273);
   icon.src =
-    "http://openweathermap.org/img/w/" + jsonObject.weather[0].icon + ".png";
+    "https://openweathermap.org/img/w/" + jsonObject.weather[0].icon + ".png";
   temperature.innerHTML = `${tempratureValue} ${CF}`;
 
   if (temperature.innerHTML >= "20" && temperature.innerHTML <= "30") {
