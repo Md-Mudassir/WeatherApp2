@@ -1,5 +1,5 @@
 // API key from openweathermap.org
-var appKey = config.apiKey;
+var appKey = "82005d27a116c2880c8f0fcb866998a0";
 
 // declaring variables
 let tempratureValue;
@@ -18,7 +18,7 @@ function enterPressed(event) {
     getWeatherDetails.findWeatherDetails();
   }
 }
-class getWeather {
+class Weather {
   // API function
   findWeatherDetails = () => {
     if (searchInput.value === "") {
@@ -34,7 +34,7 @@ class getWeather {
   };
 }
 
-let getWeatherDetails = new getWeather();
+let getWeatherDetails = new Weather();
 
 // parsing and assigning the objects to elements
 theResponse = response => {
