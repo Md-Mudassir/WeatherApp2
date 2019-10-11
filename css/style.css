@@ -5,6 +5,12 @@ body {
   font-family: "Lato", sans-serif;
   overflow: hidden;
 }
+
+.box2:selection {
+  background-color: red;
+  color: black;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
