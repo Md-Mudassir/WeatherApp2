@@ -6,20 +6,12 @@ body {
   overflow: hidden;
 }
 
-.box2:selection {
-  background-color: red;
-  color: black;
-}
-
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100vh;
 }
-#cen {
-  text-align: center;
-  margin-top: 40%;
-}
+
 .box1 {
   background-size: 100%;
   background-position: center;
