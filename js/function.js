@@ -44,14 +44,6 @@ theResponse = response => {
   icon.src =
     "https://openweathermap.org/img/w/" + jsonObject.weather[0].icon + ".png";
   temperature.innerHTML = `${tempratureValue} ${CF}`;
-
-  if (temperature.innerHTML >= "20" && temperature.innerHTML <= "30") {
-    document.getElementById("box2").style.background = "rgb(252, 255, 122)";
-  } else if (temperature.innerHTML >= "30" && temperature.innerHTML <= "40") {
-    document.getElementById("box2").style.background = "rgb(255, 153, 154)";
-  } else {
-    document.getElementById("box2").style.background = "white";
-  }
 };
 
 // retriving the data object
