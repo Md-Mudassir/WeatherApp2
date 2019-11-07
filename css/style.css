@@ -15,14 +15,22 @@ body {
 .box1 {
   background-size: 100%;
   background-position: center;
-  background-image: url(https://wi-images.condecdn.net/image/doEYpG6Xd87/crop/2040/f/weather.jpg);
+  /* background-image: url(https://wi-images.condecdn.net/image/doEYpG6Xd87/crop/2040/f/weather.jpg); */
 }
 .box2 {
-  padding-left: 10%;
-  padding-top: 15%;
+  padding-left: 5%;
+  padding-top: 5%;
+  /* margin-top: 15%; */
+  background-color: rgb(235, 232, 232);
+  height: 60%;
+  width: 75%;
+  border-radius: 0px 0px 30px 30px;
+
+  /* filter: drop-shadow(10px 10px 30px rgb(180, 180, 180)); */
+  filter: opacity(85%);
 }
 .Weather {
-  margin-top: 15%;
+  margin-top: 10%;
   position: relative;
 }
 

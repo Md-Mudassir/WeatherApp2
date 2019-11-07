@@ -12,13 +12,13 @@ Abstract: this app generates the temprature for the specified city -->
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="clouds">
         <div class="box1">
         </div>
         <div class="box2" id="box2">
             <!-- displaying the results  -->
             <header>
-                <h2 id="city">Input any city name in the world</h2>
+                <h2 id="city">Weather Forecast</h2>
                 <p id="date"></p>
                 <img src="" alt="" id="icon">
                 <h1 id="temp"></h1>
@@ -30,7 +30,13 @@ Abstract: this app generates the temprature for the specified city -->
             </div>
         </div>
 </body>
-<script src="./js/config.js"></script>
+<script src="./js/three.r92.min.js"></script>
+<script src="./js/vanta.clouds.min.js"></script>
+<script>
+    VANTA.CLOUDS({
+        el: "#clouds"
+    })
+</script>
 <script src="./js/function.js"></script>
 <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9L1nE6idZ2kaIZHRkJoyUV0gS4lyv-48&libraries=places"></script>
