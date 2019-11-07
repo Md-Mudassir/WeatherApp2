@@ -6,7 +6,7 @@ Implementation of Google places API & openweather API to fetch the place & weath
 #### Info: Fetching the weather data locally which is stored in an array. 
 Refer: https://github.com/Md-Mudassir/WeatherAppV1
 
-Link:https://weatherappv2-1.netlify.com/
+Link: https://weatherappv2-1.netlify.com/
 
 ![Layout](https://github.com/Md-Mudassir/WeatherAppV1/blob/master/css/wv1.JPG)
 
