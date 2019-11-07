@@ -1,4 +1,4 @@
-# WeatherApp2
+# WeatherAppV2
 
 Implementation of Google places API & openweather API to fetch the place & weather info. It can display the weather info of any city in the world.
 
